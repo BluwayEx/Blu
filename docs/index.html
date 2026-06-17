@@ -53,18 +53,104 @@
 
 <header>
   <h1>Air Express</h1>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Productos</a>
-    <a href="#">Ofertas</a>
-    <a href="#">Contacto</a>
-  </nav>
+<nav>
+  <a href="#">Inicio</a>
+  <a href="#tvlink">TV.LINK</a>
+  <a href="#">Productos</a>
+  <a href="#">Ofertas</a>
+  <a href="#">Contacto</a>
+</nav>
 </header>
 
 <section class="hero">
   <h2>Envío seguro Ambato</h2>
   <p>Innovación, estilo y precio justo en un solo lugar.</p>
 </section>
+
+
+<!-- TV.LINK -->
+<section class="product-section" id="tvlink">
+
+<h2 class="section-title">TV.LINK</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<div class="product-info">
+
+<video id="player" controls style="
+width:100%;
+height:800px;
+background:black;
+border-radius:20px;
+border:2px solid #00f0ff;
+box-shadow:0 0 30px #00f0ff;
+display:none;">
+</video>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+
+const video = document.getElementById("player");
+
+const stream = "https://stream.studiorhedenlive.nl/hlstv/stream.m3u8";
+
+
+function activarTV(){
+
+video.style.display="block";
+
+
+if(Hls.isSupported()){
+
+let hls = new Hls();
+
+hls.loadSource(stream);
+
+hls.attachMedia(video);
+
+
+hls.on(Hls.Events.MANIFEST_PARSED,()=>{
+
+video.play();
+
+});
+
+}
+
+else if(video.canPlayType("application/vnd.apple.mpegurl")){
+
+video.src = stream;
+
+}
+
+}
+
+
+// cuando presiones TV.LINK
+
+document.querySelector('a[href="#tvlink"]')
+.addEventListener("click",()=>{
+
+activarTV();
+
+});
+
+
+</script>
+<h3>TV.LINK STREAM</h3>
+
+<p>Transmisión en vivo</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <section class="product-section">
   <h2 class="section-title">Productos Disponibles</h2>
