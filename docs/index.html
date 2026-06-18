@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BluWay | Sin límites</title>
+  <title>BluWay | Sin Limites</title>
   <link rel="icon" type="image/jpeg" href="imagenes/icono.jpg">
 
   <style>
@@ -53,10 +53,10 @@
 <body>
 
 <header>
-  <h1>BluWay</h1>
+  <h1>BluWay | Sin Limites</h1>
 <nav>
   <a href="#">Inicio</a>
-  <a href="#Live Musica">Live Musica</a>
+  <a href="bluwaytv.html">BluWay TV</a>
   <a href="#">Productos</a>
   <a href="#">Ofertas</a>
   <a href="#">Soporte</a>
@@ -65,93 +65,8 @@
 
 <section class="hero">
   <h2>Envíos Ambato</h2>
-  <p>Estilo y precio justo en un solo lugar</p>
+  <p>Estilo y precio en un solo lugar.</p>
 </section>
-
-
-<!-- Live Musica -->
-<section class="product-section" id="Live Musica">
-
-<h2 class="section-title">Live Musica</h2>
-
-<div class="product-grid">
-
-<div class="product-card">
-
-<div class="product-info">
-
-<video id="player" controls style="
-width:100%;
-height:800px;
-background:black;
-border-radius:20px;
-border:2px solid #00f0ff;
-box-shadow:0 0 30px #00f0ff;
-display:none;">
-</video>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<script>
-
-const video = document.getElementById("player");
-
-const stream = "https://stream.studiorhedenlive.nl/hlstv/stream.m3u8";
-
-
-function activarTV(){
-
-video.style.display="block";
-
-
-if(Hls.isSupported()){
-
-let hls = new Hls();
-
-hls.loadSource(stream);
-
-hls.attachMedia(video);
-
-
-hls.on(Hls.Events.MANIFEST_PARSED,()=>{
-
-video.play();
-
-});
-
-}
-
-else if(video.canPlayType("application/vnd.apple.mpegurl")){
-
-video.src = stream;
-
-}
-
-}
-
-
-// cuando presiones Live Musica
-
-document.querySelector('a[href="#Live Musica"]')
-.addEventListener("click",()=>{
-
-activarTV();
-
-});
-
-
-</script>
-<h3>BluWay</h3>
-
-<p>Emicion Publica</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 <section class="product-section">
   <h2 class="section-title">Productos Disponibles</h2>
@@ -160,8 +75,8 @@ activarTV();
     <div class="product-card">
       <img src="imagenes/audifonos inalambricos.jpg" alt="Audífonos inalámbricos">
       <div class="product-info">
-        <h3>Audífonos Inalámbricos</h3>
-        <p>Calidad de sonido excepcional y batería de larga duración.</p>
+        <h3>Audífonos</h3>
+        <p>Bateria 8h, calidad de sonido excepcional</p>
         <div class="price">$54.99 / docena</div>
         <button class="btn comprar-btn">Comprar</button>
       </div>
@@ -197,7 +112,7 @@ activarTV();
 </div>
 
 <footer>
-© 2026 Desarrollado por Rony.C derechos reservados
+© 2026 Desarrollado por Ronny.C Derechos reservados
 </footer>
 
 <script>
