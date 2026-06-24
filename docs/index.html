@@ -9,7 +9,7 @@
   <style>
     * {margin: auto; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
     body {background: linear-gradient(135deg, #e99f08, #ffffff); color: #fff; overflow-x: hidden;}
-    header {background: rgb(21 9 83); backdrop-filter: blur(10px); padding: 1.5%;
+    header {background: rgb(21 9 83); backdrop-filter: blur(10px); padding:15px 20px;
       display: flex; align-items: center; justify-content: space-between; position:static; top: 0;
       border-bottom: 1px solid #00f0ff40; box-shadow: 0 0 15px #00f0ff30;}
     header h1 {font-size: 1.8em; color: #00f0ff; letter-spacing: 2px; text-shadow: 0 0 10px #00f0ff;}
@@ -148,7 +148,58 @@ display:none;
     min-height: 300px;
 }
 }
-  </style>
+/* Tipografía base adaptable */
+body {
+  font-size: 16px; /* tamaño base */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* reduce un poco en pantallas pequeñas */
+  }
+
+  header h1 {
+    font-size: 1.4em; /* más pequeño en móvil */
+  }
+
+  .hero h2 {
+    font-size: 2em; /* ajusta títulos */
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+  }
+
+  .product-card {
+    flex: 0 0 90%; /* ocupa casi todo el ancho en móvil */
+    margin: 0 auto;
+  }
+
+  .product-card img {
+    height: auto; /* que no quede fijo */
+    max-height: 200px;
+  }
+
+  .product-info h3 {
+    font-size: 1em;
+  }
+
+  .product-info p {
+    font-size: 0.85em;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+}
+
+
+</style>
 </head>
 <body>
 
