@@ -47,11 +47,69 @@
     select {background: #000; color: #00f0ff; border: 1px solid #00f0ff80;}
     button.pay-btn {background: #00f0ff; color: #000; font-weight: bold; cursor: pointer;}
     button.close {background: none; color: #f7f7f7; border: none; cursor: pointer; margin-top: 10px;}
-    /* --- SLIDER --- */
-    .product-slider {display: flex; overflow-x: auto; scroll-behavior: smooth; gap: 30px; padding: 20px;}
-    .product-slider::-webkit-scrollbar {height: 8px;}
-    .product-slider::-webkit-scrollbar-thumb {background: #00f0ff80; border-radius: 10px;}
-    .product-slider::-webkit-scrollbar-track {background: #081733;}
+/* --- SLIDER --- */
+
+.product-slider{
+    display:flex;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-behavior:smooth;
+    gap:30px;
+    padding:20px;
+    width:100%;
+    max-width:100%;
+}
+
+
+/* Scroll PC */
+
+.product-slider::-webkit-scrollbar{
+    height:8px;
+}
+
+
+.product-slider::-webkit-scrollbar-thumb{
+    background:#00f0ff80;
+    border-radius:10px;
+}
+
+
+.product-slider::-webkit-scrollbar-track{
+    background:#081733;
+}
+
+
+/* CELULAR */
+
+@media(max-width:768px){
+
+    .product-slider{
+
+        gap:15px;
+
+        padding:10px 0;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+    }
+
+
+    .product-slider::-webkit-scrollbar{
+
+        height:0px;
+
+    }
+
+
+    .product-card{
+
+        flex:0 0 85vw;
+
+    }
+
+}
 
 @media(max-width:768px){
 
@@ -154,17 +212,6 @@ opacity:1;
 .slider-btn{
 
 display:none;
-}
-
-}
-
-
-@media(max-width:768px){
-
-.hero{
-    background-size: cover;
-    background-position: center;
-    min-height: 300px;
 }
 
 }
